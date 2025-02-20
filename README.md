@@ -1,132 +1,84 @@
 # Wikipedia Search Application
 
-A dynamic web application that allows users to search Wikipedia articles in real-time using a clean and intuitive interface.
+This is a **Wikipedia Search Application** built using **HTML, CSS, JavaScript, and Bootstrap**. It allows users to search for topics on Wikipedia and displays the results dynamically. The application fetches data from a custom API and displays the title, link, and description of each search result.
 
 ## Features
 
-- **Real-time Search**: Get instant Wikipedia search results as you type and press Enter
-- **Dynamic Loading**: Smooth loading transitions with a spinner indicator
-- **Responsive Design**: Clean and mobile-friendly interface
-- **Rich Results**: Each result includes:
-  - Article title with direct link
-  - Full URL to the article
-  - Brief description of the content
+- **Search Functionality**: Users can type a keyword and press Enter to search for topics on Wikipedia.
+- **Dynamic Results**: Search results are displayed dynamically with titles, links, and descriptions.
+- **Loading Spinner**: A spinner is shown while the results are being fetched.
+- **Responsive Design**: The application is optimized for both desktop and mobile devices.
+- **External API Integration**: Uses a custom API (`https://apis.ccbp.in/wiki-search`) to fetch search results.
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Bootstrap 4.5.2
-- jQuery 3.5.1
-- Popper.js
-- Google Fonts (Roboto)
+- **HTML**: For structuring the content.
+- **CSS**: For styling the application.
+- **Bootstrap**: For responsive design and pre-built components like the spinner.
+- **JavaScript**: For fetching data from the API and dynamically displaying results.
+- **Google Fonts**: For custom typography.
 
-## Live Demo
+## How to Use
 
-The application interacts with the `apis.ccbp.in/wiki-search` endpoint to fetch Wikipedia search results.
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/lpkumarreddy/Wikipedia-Search-Application.git
+   ```
+2. Open the `index.html` file in your browser.
+3. Type a keyword in the search bar and press **Enter** to see the results.
 
-## Setup and Installation
+## Project Structure
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. No additional setup required as the project uses CDN links for all dependencies
+- **`index.html`**: The main HTML file containing the structure of the application.
+- **CSS Styling**: Inline styles and external Google Fonts are used for design.
+- **JavaScript**: Handles the search functionality and API integration.
+- **Bootstrap Components**: Used for the spinner and responsive layout.
 
-## How It Works
+## Screenshots
 
-1. User enters a search term in the input field
-2. Upon pressing Enter:
-   - The spinner is displayed
-   - Previous results are cleared
-   - A GET request is made to the Wikipedia search API
-   - Results are dynamically rendered on the page
+### Home Page
+![Home Page](https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/wiki-logo-img.png)
 
-## Code Structure
+### Search Results
+![Search Results](https://via.placeholder.com/600x400.png?text=Search+Results+Example)
 
-### HTML
-- Clean, semantic markup
-- Bootstrap integration for responsive design
-- Search input field
-- Results container
-- Loading spinner
+## API Used
 
-### CSS
-- Custom styling for search components
-- Responsive design elements
-- Google Fonts integration
-- Consistent color scheme and spacing
-
-### JavaScript
-- Event listeners for user input
-- Async API calls using Fetch API
-- Dynamic DOM manipulation
-- Error handling
-- Results rendering logic
-
-## API Integration
-
-The application uses a GET request to fetch search results:
-```javascript
-fetch('https://apis.ccbp.in/wiki-search?search=' + userSearch, {
-    method: 'GET'
-})
+The application uses the following API to fetch search results:
+```
+https://apis.ccbp.in/wiki-search?search=<keyword>
 ```
 
-## Styling Details
+Replace `<keyword>` with the search term entered by the user.
 
-- Font: Roboto (Google Fonts)
-- Color Scheme:
-  - Border: #d5cdcd
-  - URL Color: #006621
-  - Description Text: #444444
-- Responsive padding and margins
-- Smooth transitions
+## Code Explanation
 
-## Features Breakdown
+### HTML Structure
+- The `input` element is used for the search bar.
+- A `div` with a spinner is shown while the results are being fetched.
+- The `searchResults` `div` dynamically displays the search results.
 
-### Search Input
-- Placeholder text for user guidance
-- Real-time input handling
-- Enter key detection for search triggering
+### JavaScript Functionality
+- **`getSearchResult`**: Fetches data from the API when the user presses Enter.
+- **`createAndAppendSearchResult`**: Creates and appends each search result to the DOM.
+- **`displayResults`**: Displays the fetched results and hides the spinner.
 
-### Results Display
-- Title with clickable link
-- URL display
-- Description paragraph
-- Proper spacing between results
-
-### Loading State
-- Bootstrap spinner
-- Show/hide functionality
-- Smooth transitions
-
-## Future Enhancements
-
-Potential improvements that could be added:
-
-1. Autocomplete suggestions
-2. Search history
-3. Advanced search filters
-4. Category-based searching
-5. Save favorite articles
-6. Share functionality
-7. Dark mode toggle
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+### CSS Styling
+- Custom styles are applied to the search bar, results, and spinner.
+- Google Fonts are used for typography.
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
+---
+
+## MIT License
+
+```plaintext
 MIT License
 
-Copyright (c) 2025 lpkumarreddy
+Copyright (c) 2023 LINGAM PAVAN KUAMR REDDY
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -145,9 +97,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
 
-## Acknowledgments
+---
 
-- Wikipedia API for providing search functionality
-- Bootstrap team for the responsive design framework
-- CCBP for API endpoint hosting
+## How to Contribute
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeatureName`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeatureName`).
+5. Open a pull request.
